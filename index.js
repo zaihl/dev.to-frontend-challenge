@@ -66,11 +66,10 @@ async function resumeShuffle(e) {
 async function handleClick(e) {
   e.target.style.transform = "translate(0, -400px)";
   heroDesc.style.transform = "translate(0, -50%)";
-  await new Promise((resolve) => setTimeout(resolve, 100));
+  await new Promise((resolve) => setTimeout(resolve, 10000));
   await handleAnimation(heroDesc);
   heroDesc.style.border = "4px solid white"
   heroDesc.style.animation = "loading 10s linear forwards"
-  console.log(heroDesc.style)
   headingArray = document.querySelectorAll(".content-list-item-title");
   gridItemArray = document.querySelectorAll(".content-list-item");
   descriptionArray = document.querySelectorAll(
