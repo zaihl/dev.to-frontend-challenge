@@ -12,7 +12,6 @@ let a;
 let shufflePaused = false;
 
 async function assignShuffledArray() {
-    await new Promise(resolve => setTimeout(resolve, 1000))
   while (!shufflePaused) {
     if (shufflePaused) {
       break;
