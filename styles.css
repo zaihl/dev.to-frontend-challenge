@@ -1,0 +1,275 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------- */
+
+:root {
+  --dark-blue: #0e1217;
+  --muted-blue: #457b9d;
+  --light-blue: #a8dadc;
+  --item: #1c1f26;
+  --text: #ffffff;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#header {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  justify-content: center;
+  padding: 1rem 0;
+  z-index: 50;
+}
+
+body {
+  background: radial-gradient(circle, #0e1217, #09215a);
+  overflow: hidden;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text);
+}
+
+#hero h2,
+#content-title,
+#header > h1 {
+  color: var(--text);
+}
+
+#header > h1 {
+  font-size: 2.5rem;
+}
+
+#header {
+  background-color: #171a21ad;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.378);
+  backdrop-filter: blur(100px) brightness(1.5);
+}
+
+#content {
+  display: none;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+#content-title {
+  align-self: center;
+}
+
+#content-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.content-list-item {
+  position: relative;
+  /* text-align: center; */
+  list-style-type: none;
+  width: 40vw;
+  aspect-ratio: 1;
+  margin: 1rem 0;
+  background-color: #1c1f2614;
+  backdrop-filter: blur(100px);
+  border: 4px solid #545b6a;
+  border-radius: 2rem;
+  backdrop-filter: contrast(0.8);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-list-item:hover {
+  transform: scale(1.05);
+}
+
+.content-list-item-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-blue);
+}
+
+.content-list-item-title,
+.content-list-item-description {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content-list-item-description {
+  opacity: 0;
+}
+
+.initialized {
+  width: 60vw;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.initialized p {
+  transition: transform 1s ease-out;
+  position: absolute;
+  transform: translate(0, 400px);
+}
+
+#hero-title {
+  transition: transform 1s ease-in;
+  font-weight: bold;
+}
+
+.initialized #hero-title {
+  cursor: pointer;
+}
+
+@media (min-width: 1080px) {
+  #content-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .content-list-item {
+    width: 20vw;
+  }
+}
+
+#content-title {
+  font-family: "Lobster", cursive, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #eddd3294;
+  text-align: center;
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.sun {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    #ffd700 40%,
+    #ffa500 60%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  box-shadow: 0 0 50px 20px rgba(255, 215, 0, 0.5);
+  animation: sunMove 10s infinite linear;
+}
+@keyframes sunMove {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
