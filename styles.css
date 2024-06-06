@@ -98,6 +98,7 @@ body {
 }
 
 body {
+  background-color: #092053;
   background: radial-gradient(circle, #0e1217, #09215a);
   overflow: hidden;
 }
@@ -179,6 +180,13 @@ body {
   transform: translate(-50%, -50%);
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
 }
 
 .content-list-item-description {
@@ -192,13 +200,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
 }
 
 .initialized p {

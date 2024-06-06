@@ -7,11 +7,12 @@ const content = document.getElementById("content");
 
 const cardArray = [];
 const cardElementArray = [];
-let a;
+let a, b;
 
 let shufflePaused = false;
 
 async function assignShuffledArray() {
+  b = await new Promise((resolve) => setTimeout(resolve, 1000))
   while (!shufflePaused) {
     if (shufflePaused) {
       break;
@@ -59,6 +60,7 @@ async function resumeShuffle(e) {
   e.target.childNodes[3].style.opacity = 0;
   e.target.style["border-color"] = "#545b6a";
   await a.clearTimeout();
+  await b.clearTimeout();
   await assignShuffledArray();
 }
 
