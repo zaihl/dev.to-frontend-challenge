@@ -49,6 +49,11 @@ const head = document.getElementsByTagName("head")[0]; // Assuming you have a <h
 // Append the script to the head
 head.appendChild(faScript);
 
+const meta = document.createElement("meta");
+meta.name = "viewport";
+meta.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0";
+head.appendChild(meta);
+
 const nextBtn = document.createElement("button");
 nextBtn.classList.add("next-btn");
 
