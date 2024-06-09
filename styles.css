@@ -210,6 +210,7 @@ select {
   border-radius: 50%;
   box-shadow: -20px 25px #ffff99;
   filter: blur(10px);
+  -webkit-filter: blur(10px);;
 }
 
 @keyframes disappearUpwards {
@@ -334,15 +335,18 @@ select {
   .moon::after {
     box-shadow: -40px 30px #ffff99;
     filter: blur(15px);
+    -webkit-filter: blur(15px);
   }
 }
 
 @keyframes getBlurred {
   0% {
     filter: blur(0);
+    -webkit-filter: blur(0);
   }
   100% {
     filter: blur(10px);
+    -webkit-filter: blur(10px);
   }
 }
 
@@ -393,6 +397,8 @@ html {
   top: 0px;
   background-color: #ffffff4d;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
   display: flex;
   justify-content: center;
   font-weight: bold;
@@ -452,12 +458,14 @@ html {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     filter: blur(0);
+    -webkit-filter: blur(0);  
   }
   100% {
     top: 50%;
     transform: translate(-50%, -50%) scale(3);
     opacity: 0;
-    filter: blur(10px);
+    filter: blur(10px); 
+    -webkit-filter: blur(10px);
   }
 }
 
@@ -514,6 +522,8 @@ html {
   height: 60%;
   background-color: #ffffff4d;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
   transition: transform 0.5s ease;
   display: flex;
   justify-content: center;
@@ -567,6 +577,7 @@ html {
   width: 100vw;
   position: absolute;
   backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   padding: 0;
   margin: 0;
   z-index: 325;
@@ -617,9 +628,11 @@ html {
 @keyframes blurContainer {
   0% {
     backdrop-filter: blur(0px) brightness(1);
+    -webkit-backdrop-filter: blur(0px) brightness(1);
   }
   100% {
-    backdrop-filter: blur(25px) brightness(0.8);
+    backdrop-filter: blur(25px) brightness(0.8);;
+    -webkit-backdrop-filter: blur(25px) brightness(0.8);
     box-shadow: inset 0px 0px 100px black;
   }
 }
@@ -627,9 +640,11 @@ html {
 @keyframes removeContainer {
   0% {
     backdrop-filter: blur(25px);
+
   }
   100% {
     backdrop-filter: blur(0px);
+
   }
 }
 
@@ -730,10 +745,12 @@ html {
   0% {
     opacity: 0;
     filter: blur(20px);
+    -webkit-filter: blur(20px);
   }
   100% {
     opacity: 1;
     filter: blur(0);
+    -webkit-filter: blur(0);
   }
 }
 
@@ -741,10 +758,12 @@ html {
   0% {
     opacity: 1;
     filter: blur(0);
+    -webkit-filter: blur(0);
   }
   100% {
     opacity: 0;
     filter: blur(10px);
+    -webkit-filter: blur(10px);
   }
 }
 
@@ -812,6 +831,7 @@ html {
   width: 100%;
   z-index: 10;
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .item h3::before {
@@ -823,6 +843,7 @@ html {
   left: 0;
   background-color: #ffffff4d;
   filter: blur(15px);
+  -webkit-filter: blur(15px);
   z-index: -1;
 }
 
@@ -850,6 +871,7 @@ html {
   content: '';
   position: absolute;
   filter: blur(40px);
+  -webkit-filter: blur(40px);
   top: -42vh;
   left: -3vw;
   height: 102vh;
@@ -862,6 +884,7 @@ html {
   content: '';
   position: absolute;
   filter: blur(40px);
+  -webkit-filter: blur(40px);
   top: -42vh;
   right: -3vw;
   height: 102vh;
