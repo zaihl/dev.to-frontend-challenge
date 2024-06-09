@@ -34,6 +34,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  touch-action: manipulation;
   min-height: 100vh;
   max-width: 100vw;
   text-rendering: optimizeSpeed;
