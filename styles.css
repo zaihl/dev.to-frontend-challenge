@@ -937,3 +937,43 @@ img {
 .expanded-description, .expanded-form h3 {
   cursor: default;
 }
+
+@media (max-width: 480px) {
+  #header {
+    padding: 0.5rem;
+  }
+  #eye {
+    font-size: 1.5rem;
+    top: 80px;
+    right: 4px;
+  }
+  #toggle {
+    top: 100px;
+    right: 20px;
+  }
+  #content-title {
+    font-size: 0.75rem;
+  }
+  #hero-title {
+    font-size: 3.5rem;
+  }
+  .item {
+    width: 60vw;
+    height: 50%;
+  }
+  .item img, .item a {
+    width: 60vw;
+  }
+  .expanded-form h2 {
+    font-size: 1.2rem !important;
+  }
+  .expanded-description-container p {
+    font-size: 0.65rem !important;
+  }
+  .expanded-form {
+    gap: 1rem;
+  }
+  #header-title {
+    font-size: 1.5rem;
+  }
+}

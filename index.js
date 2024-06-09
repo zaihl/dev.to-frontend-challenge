@@ -234,6 +234,17 @@ function toggleBlur() {
   main.style.transition = "background 1s";
 }
 
+function toggleUnblur() {
+  sceneContainer.style.filter = "blur(0)";
+  sceneContainer.style.transition = "filter 2s";
+  if (!lightMode) {
+    main.style.background = "#10104f";
+  } else {
+    main.style.background = "rgba(135, 207, 235, 0.6)";
+  }
+  main.style.transition = "background 1s";
+}
+
 async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -262,6 +273,7 @@ const hide = async () => {
   heroDescription.style.animation = "heroDescriptionReverse 2s forwards";
   await delay(2000);
   initialHide();
+  toggleUnblur();
   heroDescription.style.display = "block";
 }
 
